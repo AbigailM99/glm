@@ -1,0 +1,2 @@
+T:\glm\lib\Debug\glm_static.pdb
+T:\glm\glm\glm_static.dir\Debug\glm_static.pdb

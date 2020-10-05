@@ -1,0 +1,870 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F3CC04F4-DAA5-39BA-90C0-4681EDCC348E}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="T:\glm\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule T:/glm/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -ST:/glm -BT:/glm --check-stamp-file T:/glm/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\Platform\WindowsPaths.cmake;T:\glm\CMakeFiles\3.18.3\CMakeCXXCompiler.cmake;T:\glm\CMakeFiles\3.18.3\CMakeRCCompiler.cmake;T:\glm\CMakeFiles\3.18.3\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">T:\glm\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule T:/glm/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -ST:/glm -BT:/glm --check-stamp-file T:/glm/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\Platform\WindowsPaths.cmake;T:\glm\CMakeFiles\3.18.3\CMakeCXXCompiler.cmake;T:\glm\CMakeFiles\3.18.3\CMakeRCCompiler.cmake;T:\glm\CMakeFiles\3.18.3\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">T:\glm\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="T:\glm\ZERO_CHECK.vcxproj">
+      <Project>{C2D7DB77-35E4-373F-8384-FD2E140EEC17}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\glm\glm_shared.vcxproj">
+      <Project>{8C1E48A2-33A9-3017-8FAB-D20FEF48601F}</Project>
+      <Name>glm_shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\glm\glm_static.vcxproj">
+      <Project>{99B064AB-C27F-32AF-B717-6047BEC0F141}</Project>
+      <Name>glm_static</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\bug\test-bug_ms_vec_static.vcxproj">
+      <Project>{20EBB13A-34F2-338C-AD94-12AF1FE69D7C}</Project>
+      <Name>test-bug_ms_vec_static</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_cpp_constexpr.vcxproj">
+      <Project>{E309863C-61C4-30A8-97CB-617BC628F348}</Project>
+      <Name>test-core_cpp_constexpr</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_cpp_defaulted_ctor.vcxproj">
+      <Project>{A9F6C4B3-974B-35D6-8DB3-C22AAABA1C1C}</Project>
+      <Name>test-core_cpp_defaulted_ctor</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_force_aligned_gentypes.vcxproj">
+      <Project>{5ED7402F-624A-3604-9E69-B18B6BCFA3C2}</Project>
+      <Name>test-core_force_aligned_gentypes</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_force_arch_unknown.vcxproj">
+      <Project>{BFCCCC6E-DDA7-315D-B5B4-9D59C1038E3C}</Project>
+      <Name>test-core_force_arch_unknown</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_force_compiler_unknown.vcxproj">
+      <Project>{3467BD85-3D90-346B-A721-0A05B809E9A0}</Project>
+      <Name>test-core_force_compiler_unknown</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_force_ctor_init.vcxproj">
+      <Project>{73905082-C20F-3333-880B-BD027BB3774C}</Project>
+      <Name>test-core_force_ctor_init</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_force_cxx03.vcxproj">
+      <Project>{E4F1CC6C-4AA5-33AC-A722-1403186F4B0B}</Project>
+      <Name>test-core_force_cxx03</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_force_cxx98.vcxproj">
+      <Project>{2243158D-D8D0-3D44-AA27-3617975DE653}</Project>
+      <Name>test-core_force_cxx98</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_force_cxx_unknown.vcxproj">
+      <Project>{881C3A00-2C53-3BC0-9422-54B1AF7FC2F6}</Project>
+      <Name>test-core_force_cxx_unknown</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_force_explicit_ctor.vcxproj">
+      <Project>{C597C03F-FA41-352D-BF68-7BCBE0BD00FB}</Project>
+      <Name>test-core_force_explicit_ctor</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_force_inline.vcxproj">
+      <Project>{8DB22739-8767-3894-85D3-0AC2B5A445AC}</Project>
+      <Name>test-core_force_inline</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_force_platform_unknown.vcxproj">
+      <Project>{D5FD07ED-65DE-3068-8CAA-FFE7DE7500AE}</Project>
+      <Name>test-core_force_platform_unknown</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_force_pure.vcxproj">
+      <Project>{B160B332-BCD8-35B7-B71C-29901317EFA0}</Project>
+      <Name>test-core_force_pure</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_force_quat_wxyz.vcxproj">
+      <Project>{BDB1E7B8-55C3-333B-963A-A4148A93BBD2}</Project>
+      <Name>test-core_force_quat_wxyz</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_force_unrestricted_gentype.vcxproj">
+      <Project>{88D7684E-5255-3829-A811-E10BB71599F2}</Project>
+      <Name>test-core_force_unrestricted_gentype</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_force_xyzw_only.vcxproj">
+      <Project>{66A9E9B1-449B-32EA-B7CC-6FF641478E0B}</Project>
+      <Name>test-core_force_xyzw_only</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_func_common.vcxproj">
+      <Project>{0477A509-5980-357D-A7E0-AA14D87006D6}</Project>
+      <Name>test-core_func_common</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_func_exponential.vcxproj">
+      <Project>{6E745696-0517-35F2-A289-654548447AA0}</Project>
+      <Name>test-core_func_exponential</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_func_geometric.vcxproj">
+      <Project>{7A3C9EE7-07BF-3CF3-82CA-26E8D54A7383}</Project>
+      <Name>test-core_func_geometric</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_func_integer.vcxproj">
+      <Project>{15D44F1D-D46A-3D9F-A99E-3880BA0C13E7}</Project>
+      <Name>test-core_func_integer</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_func_integer_bit_count.vcxproj">
+      <Project>{2FB59083-E289-34D4-ADD4-D8B6E5554B73}</Project>
+      <Name>test-core_func_integer_bit_count</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_func_integer_find_lsb.vcxproj">
+      <Project>{4E5C0688-7EA2-3406-84C5-2DEB66911147}</Project>
+      <Name>test-core_func_integer_find_lsb</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_func_integer_find_msb.vcxproj">
+      <Project>{B093988F-641A-3384-A72D-55C5E1FF1470}</Project>
+      <Name>test-core_func_integer_find_msb</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_func_matrix.vcxproj">
+      <Project>{5435910F-6BD6-36B9-AF9D-82C3E7859B2C}</Project>
+      <Name>test-core_func_matrix</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_func_noise.vcxproj">
+      <Project>{CE8D8874-CB24-3EEF-AA5E-EE1E6D6F114A}</Project>
+      <Name>test-core_func_noise</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_func_packing.vcxproj">
+      <Project>{07D28068-EC4F-32F4-B9ED-08737CDBE0E7}</Project>
+      <Name>test-core_func_packing</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_func_swizzle.vcxproj">
+      <Project>{552FB7C0-A073-385A-BC06-763251B4198B}</Project>
+      <Name>test-core_func_swizzle</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_func_trigonometric.vcxproj">
+      <Project>{117DC858-DB61-33C1-AA06-B57B042F559D}</Project>
+      <Name>test-core_func_trigonometric</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_func_vector_relational.vcxproj">
+      <Project>{15B0693A-F274-335F-8AA6-2D17BBC203C1}</Project>
+      <Name>test-core_func_vector_relational</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_setup_force_cxx98.vcxproj">
+      <Project>{C5B7098B-1BC4-32EB-B404-F7097D16452B}</Project>
+      <Name>test-core_setup_force_cxx98</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_setup_force_size_t_length.vcxproj">
+      <Project>{4B6DCAB8-2D56-3AF5-A0D3-E4751B3B156A}</Project>
+      <Name>test-core_setup_force_size_t_length</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_setup_message.vcxproj">
+      <Project>{6071F22F-0D73-3F3D-B01B-F7EB282CC65D}</Project>
+      <Name>test-core_setup_message</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_setup_platform_unknown.vcxproj">
+      <Project>{511435C5-84FD-3A50-8745-B698B2B7FF66}</Project>
+      <Name>test-core_setup_platform_unknown</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_setup_precision.vcxproj">
+      <Project>{D82AB67F-9C5A-3A83-8315-764DB8C591AE}</Project>
+      <Name>test-core_setup_precision</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_type_aligned.vcxproj">
+      <Project>{C36FEAAB-316B-3876-A824-E830E3027146}</Project>
+      <Name>test-core_type_aligned</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_type_cast.vcxproj">
+      <Project>{B350356B-7DD6-31F9-A8FB-12D84930A150}</Project>
+      <Name>test-core_type_cast</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_type_ctor.vcxproj">
+      <Project>{32CF9CAE-4A94-31F8-84D3-4FD60465E6FF}</Project>
+      <Name>test-core_type_ctor</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_type_int.vcxproj">
+      <Project>{AF8CC025-B761-3362-88A3-98FE37871D2F}</Project>
+      <Name>test-core_type_int</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_type_length.vcxproj">
+      <Project>{11021A1E-6688-37FB-8686-490E77CD19DB}</Project>
+      <Name>test-core_type_length</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_type_mat2x2.vcxproj">
+      <Project>{D4416001-6F0B-36F2-8794-7DD0D0E1EA4B}</Project>
+      <Name>test-core_type_mat2x2</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_type_mat2x3.vcxproj">
+      <Project>{32027889-05E0-3E35-A3D5-629E251D3621}</Project>
+      <Name>test-core_type_mat2x3</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_type_mat2x4.vcxproj">
+      <Project>{2AAB7743-8F69-30B3-B8A9-A5BFA3C12B70}</Project>
+      <Name>test-core_type_mat2x4</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_type_mat3x2.vcxproj">
+      <Project>{44F52CB9-DB72-325D-957E-3458E998C073}</Project>
+      <Name>test-core_type_mat3x2</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_type_mat3x3.vcxproj">
+      <Project>{7041444B-F3F2-3E36-A0D3-D5753FB6ADD5}</Project>
+      <Name>test-core_type_mat3x3</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_type_mat3x4.vcxproj">
+      <Project>{F94C0BB8-D1E1-3F81-B71B-5325EDB9EA1F}</Project>
+      <Name>test-core_type_mat3x4</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_type_mat4x2.vcxproj">
+      <Project>{5EAA5AAD-E946-384D-B70A-58D1AD2DFCED}</Project>
+      <Name>test-core_type_mat4x2</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_type_mat4x3.vcxproj">
+      <Project>{E7CDA100-7467-3616-8D4A-34767047969C}</Project>
+      <Name>test-core_type_mat4x3</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_type_mat4x4.vcxproj">
+      <Project>{8F67712B-35BA-3594-BE3F-F03DF2397E41}</Project>
+      <Name>test-core_type_mat4x4</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_type_vec1.vcxproj">
+      <Project>{C0BCDA81-5FE1-3736-8949-C8514C30D5A2}</Project>
+      <Name>test-core_type_vec1</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_type_vec2.vcxproj">
+      <Project>{F28EEAAB-7A8F-34F9-AE8B-4751C9238DDC}</Project>
+      <Name>test-core_type_vec2</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_type_vec3.vcxproj">
+      <Project>{D6DA80F0-5205-3E69-8E22-9FC6AC31E8D8}</Project>
+      <Name>test-core_type_vec3</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\core\test-core_type_vec4.vcxproj">
+      <Project>{C1DD4C3F-BAB9-3475-A472-F0E5DED6CD15}</Project>
+      <Name>test-core_type_vec4</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_matrix_common.vcxproj">
+      <Project>{21A3D8B9-EEF9-3F62-9B73-53A4400B82F1}</Project>
+      <Name>test-ext_matrix_common</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_matrix_int2x2_sized.vcxproj">
+      <Project>{62DD21E2-3F9E-3F5D-A032-D5EE61C0967F}</Project>
+      <Name>test-ext_matrix_int2x2_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_matrix_int2x3_sized.vcxproj">
+      <Project>{117E4B10-314D-3096-84DD-B101F0E08BE6}</Project>
+      <Name>test-ext_matrix_int2x3_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_matrix_int2x4_sized.vcxproj">
+      <Project>{8E25F39A-E9E9-38DE-BA86-B5BFEA5616DC}</Project>
+      <Name>test-ext_matrix_int2x4_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_matrix_int3x2_sized.vcxproj">
+      <Project>{7ADC2EF6-88EA-3029-AFAC-18D0C5767B6B}</Project>
+      <Name>test-ext_matrix_int3x2_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_matrix_int3x3_sized.vcxproj">
+      <Project>{77457448-D0B5-37C2-B6E5-3F97DA205294}</Project>
+      <Name>test-ext_matrix_int3x3_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_matrix_int3x4_sized.vcxproj">
+      <Project>{D9E638C4-27CE-3D41-9A78-6D21384F2D56}</Project>
+      <Name>test-ext_matrix_int3x4_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_matrix_int4x2_sized.vcxproj">
+      <Project>{B3EF74CA-42E4-3516-8985-475B54317860}</Project>
+      <Name>test-ext_matrix_int4x2_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_matrix_int4x3_sized.vcxproj">
+      <Project>{12B675B2-9D27-3391-81A8-5FBA3512ACB0}</Project>
+      <Name>test-ext_matrix_int4x3_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_matrix_int4x4_sized.vcxproj">
+      <Project>{DE312416-FF6C-3858-B30B-347FE1E33599}</Project>
+      <Name>test-ext_matrix_int4x4_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_matrix_relational.vcxproj">
+      <Project>{2AE6DC38-12A8-3ACD-8B46-CB378ADB73BB}</Project>
+      <Name>test-ext_matrix_relational</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_matrix_transform.vcxproj">
+      <Project>{72849E3E-564D-3B14-977F-BFA609604B8B}</Project>
+      <Name>test-ext_matrix_transform</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_matrix_uint2x2_sized.vcxproj">
+      <Project>{1F9D3CAA-BF53-3706-A756-53053F00A6F5}</Project>
+      <Name>test-ext_matrix_uint2x2_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_matrix_uint2x3_sized.vcxproj">
+      <Project>{27E5D50A-F920-377E-89CF-86809F71E9EA}</Project>
+      <Name>test-ext_matrix_uint2x3_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_matrix_uint2x4_sized.vcxproj">
+      <Project>{9EAE6843-244E-367A-AA05-EE48DFA5B931}</Project>
+      <Name>test-ext_matrix_uint2x4_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_matrix_uint3x2_sized.vcxproj">
+      <Project>{31477B0A-7FEB-3C2D-8D15-200EB9DC5D22}</Project>
+      <Name>test-ext_matrix_uint3x2_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_matrix_uint3x3_sized.vcxproj">
+      <Project>{509B2AE5-24B4-3564-AF43-F2AC28587530}</Project>
+      <Name>test-ext_matrix_uint3x3_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_matrix_uint3x4_sized.vcxproj">
+      <Project>{B030DA9A-7B86-3556-94A8-ABA0ABD2694F}</Project>
+      <Name>test-ext_matrix_uint3x4_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_matrix_uint4x2_sized.vcxproj">
+      <Project>{8D59EFE2-016E-3999-A9D0-B8B5C212BDAD}</Project>
+      <Name>test-ext_matrix_uint4x2_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_matrix_uint4x3_sized.vcxproj">
+      <Project>{017C1390-8A26-39E9-A036-098D43E75569}</Project>
+      <Name>test-ext_matrix_uint4x3_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_matrix_uint4x4_sized.vcxproj">
+      <Project>{41405425-7CD7-3608-B136-5A9B999DD326}</Project>
+      <Name>test-ext_matrix_uint4x4_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_quaternion_common.vcxproj">
+      <Project>{F5DBFBD4-CF78-3D77-AF3F-A3EDBA7BB07A}</Project>
+      <Name>test-ext_quaternion_common</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_quaternion_exponential.vcxproj">
+      <Project>{F8C9B4CC-752E-33B2-9AA8-58B849C6687B}</Project>
+      <Name>test-ext_quaternion_exponential</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_quaternion_geometric.vcxproj">
+      <Project>{884C5D38-016F-3D92-8FC5-78126907AA79}</Project>
+      <Name>test-ext_quaternion_geometric</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_quaternion_relational.vcxproj">
+      <Project>{33539AE0-4419-3ED0-BDBE-E1642ACA841E}</Project>
+      <Name>test-ext_quaternion_relational</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_quaternion_transform.vcxproj">
+      <Project>{A45E7CE2-1B60-39EB-8862-258ED0471997}</Project>
+      <Name>test-ext_quaternion_transform</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_quaternion_trigonometric.vcxproj">
+      <Project>{5CF82FA8-632D-3668-8D8F-58A9D30FED65}</Project>
+      <Name>test-ext_quaternion_trigonometric</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_quaternion_type.vcxproj">
+      <Project>{611AB7F0-ECCF-328C-AECD-5C13CEC12CA0}</Project>
+      <Name>test-ext_quaternion_type</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_scalar_common.vcxproj">
+      <Project>{48FFD643-AE0C-3435-A9A2-7E289E4B85A7}</Project>
+      <Name>test-ext_scalar_common</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_scalar_constants.vcxproj">
+      <Project>{3AB6C475-8514-388E-A34F-723716DE600F}</Project>
+      <Name>test-ext_scalar_constants</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_scalar_int_sized.vcxproj">
+      <Project>{A45FE26D-171D-3BF5-81EB-5D75CA775275}</Project>
+      <Name>test-ext_scalar_int_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_scalar_integer.vcxproj">
+      <Project>{8312A3FF-986B-32B9-91D2-82B8E6E8FD9B}</Project>
+      <Name>test-ext_scalar_integer</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_scalar_relational.vcxproj">
+      <Project>{E6EEA1CD-E26A-333C-BC40-E3CFC1B69536}</Project>
+      <Name>test-ext_scalar_relational</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_scalar_uint_sized.vcxproj">
+      <Project>{A63CCC9F-5A43-326E-951E-3A8F0496B111}</Project>
+      <Name>test-ext_scalar_uint_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_scalar_ulp.vcxproj">
+      <Project>{8605D5C5-4B09-315E-AE90-D1A117026B76}</Project>
+      <Name>test-ext_scalar_ulp</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_vec1.vcxproj">
+      <Project>{665BACC2-D904-3992-B9A5-236714E61F64}</Project>
+      <Name>test-ext_vec1</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_vector_bool1.vcxproj">
+      <Project>{6964DC10-5C86-3E91-BA48-33D94C906571}</Project>
+      <Name>test-ext_vector_bool1</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_vector_common.vcxproj">
+      <Project>{C991791F-5FED-36DA-B58A-8CFA80D3376D}</Project>
+      <Name>test-ext_vector_common</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_vector_iec559.vcxproj">
+      <Project>{2321ED8E-CA69-3261-A4E9-282083033AC1}</Project>
+      <Name>test-ext_vector_iec559</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_vector_int1_sized.vcxproj">
+      <Project>{D0A8A1F4-91C4-39D3-874E-DA9C47CCBEF9}</Project>
+      <Name>test-ext_vector_int1_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_vector_int2_sized.vcxproj">
+      <Project>{4AE23015-C0EB-35D4-8C91-D568E9CB685A}</Project>
+      <Name>test-ext_vector_int2_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_vector_int3_sized.vcxproj">
+      <Project>{24635AE1-FB79-3433-8CC7-2B8EF54C0726}</Project>
+      <Name>test-ext_vector_int3_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_vector_int4_sized.vcxproj">
+      <Project>{BBD8D9DE-E4AD-33E0-B158-5AC245A87980}</Project>
+      <Name>test-ext_vector_int4_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_vector_integer.vcxproj">
+      <Project>{63AD5760-EC84-3B96-A387-F9EEA40BA4FD}</Project>
+      <Name>test-ext_vector_integer</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_vector_integer_sized.vcxproj">
+      <Project>{6CB7FC7A-6FE1-366A-99F3-CEF5B24835D2}</Project>
+      <Name>test-ext_vector_integer_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_vector_relational.vcxproj">
+      <Project>{5B1BF9AF-0BFA-3F29-A555-61D29D309811}</Project>
+      <Name>test-ext_vector_relational</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_vector_uint1_sized.vcxproj">
+      <Project>{691791DA-ED70-35FF-9645-95A309405CE6}</Project>
+      <Name>test-ext_vector_uint1_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_vector_uint2_sized.vcxproj">
+      <Project>{865BC750-7A7D-38C7-B0E6-99C0F3C976E2}</Project>
+      <Name>test-ext_vector_uint2_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_vector_uint3_sized.vcxproj">
+      <Project>{F434A40C-782E-378A-AF70-820F3FA75736}</Project>
+      <Name>test-ext_vector_uint3_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_vector_uint4_sized.vcxproj">
+      <Project>{958F5B74-F6FC-3379-B41E-E84EE343F2FF}</Project>
+      <Name>test-ext_vector_uint4_sized</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\ext\test-ext_vector_ulp.vcxproj">
+      <Project>{60D851BD-8E7E-3B77-BF51-D51A548B3364}</Project>
+      <Name>test-ext_vector_ulp</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtc\test-gtc_bitfield.vcxproj">
+      <Project>{27985F79-B022-3091-B906-75F4B0FD3DB5}</Project>
+      <Name>test-gtc_bitfield</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtc\test-gtc_color_space.vcxproj">
+      <Project>{D1C7B8E6-DCA5-38DC-8BC8-51024AC19F05}</Project>
+      <Name>test-gtc_color_space</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtc\test-gtc_constants.vcxproj">
+      <Project>{6D7433FF-4670-3412-91A2-1FF4964BA76F}</Project>
+      <Name>test-gtc_constants</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtc\test-gtc_epsilon.vcxproj">
+      <Project>{74F84EF0-374B-3994-95C6-756761C22DBB}</Project>
+      <Name>test-gtc_epsilon</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtc\test-gtc_integer.vcxproj">
+      <Project>{1E2BEDC8-FF54-31C9-A58A-90676F2B1CAA}</Project>
+      <Name>test-gtc_integer</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtc\test-gtc_matrix_access.vcxproj">
+      <Project>{D67C5AA2-F44B-363A-B872-E74E0176F930}</Project>
+      <Name>test-gtc_matrix_access</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtc\test-gtc_matrix_integer.vcxproj">
+      <Project>{B5D7EC65-EBF3-338A-890B-BE08473B4758}</Project>
+      <Name>test-gtc_matrix_integer</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtc\test-gtc_matrix_inverse.vcxproj">
+      <Project>{013DC97C-06FC-3F04-AB8F-8810CBB051CD}</Project>
+      <Name>test-gtc_matrix_inverse</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtc\test-gtc_matrix_transform.vcxproj">
+      <Project>{911AA355-F203-3C93-A2E4-CE8AC93CF586}</Project>
+      <Name>test-gtc_matrix_transform</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtc\test-gtc_noise.vcxproj">
+      <Project>{2FE424EF-6FFD-3377-9AD2-1759901CF035}</Project>
+      <Name>test-gtc_noise</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtc\test-gtc_packing.vcxproj">
+      <Project>{C54D4811-3EF3-3B78-B7FA-A22AA801CD31}</Project>
+      <Name>test-gtc_packing</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtc\test-gtc_quaternion.vcxproj">
+      <Project>{7CBADFD1-833B-3AA8-AEE2-BF0FFCA792A2}</Project>
+      <Name>test-gtc_quaternion</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtc\test-gtc_random.vcxproj">
+      <Project>{A5FCAB3D-0B33-3D64-8F3F-27CCC3B12B78}</Project>
+      <Name>test-gtc_random</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtc\test-gtc_reciprocal.vcxproj">
+      <Project>{ED5E3D63-002A-354A-8589-90D41B51EC26}</Project>
+      <Name>test-gtc_reciprocal</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtc\test-gtc_round.vcxproj">
+      <Project>{C9D24490-7933-31C1-9181-0CF897813FE3}</Project>
+      <Name>test-gtc_round</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtc\test-gtc_type_aligned.vcxproj">
+      <Project>{08290E0E-5324-3929-9D09-D7989D0FE002}</Project>
+      <Name>test-gtc_type_aligned</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtc\test-gtc_type_precision.vcxproj">
+      <Project>{C733DC58-EA1F-39C2-A9E6-5326FAAC40FF}</Project>
+      <Name>test-gtc_type_precision</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtc\test-gtc_type_ptr.vcxproj">
+      <Project>{30B5517E-7283-3A72-9702-4EA4DDC3DDDD}</Project>
+      <Name>test-gtc_type_ptr</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtc\test-gtc_ulp.vcxproj">
+      <Project>{1991A5AE-26C3-3B3D-B198-8DB2753EAF2C}</Project>
+      <Name>test-gtc_ulp</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtc\test-gtc_vec1.vcxproj">
+      <Project>{4C3367B0-0759-381C-A650-0FE14AA1CCEB}</Project>
+      <Name>test-gtc_vec1</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx.vcxproj">
+      <Project>{3C9A6D93-8B49-3074-A7FF-C536BDF55B76}</Project>
+      <Name>test-gtx</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_associated_min_max.vcxproj">
+      <Project>{D1EB22BE-18FE-3D03-9392-EFD7D08B28CF}</Project>
+      <Name>test-gtx_associated_min_max</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_closest_point.vcxproj">
+      <Project>{B3F8CEBA-5F4D-3521-8D2E-F7E1B6EEF3B5}</Project>
+      <Name>test-gtx_closest_point</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_color_encoding.vcxproj">
+      <Project>{EED756BD-E4B2-39F4-9387-EEDB88BE3283}</Project>
+      <Name>test-gtx_color_encoding</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_color_space.vcxproj">
+      <Project>{EBCB61DD-26CD-3663-A97F-082A4EF23E8A}</Project>
+      <Name>test-gtx_color_space</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_color_space_YCoCg.vcxproj">
+      <Project>{F800D244-CB8D-36DC-A03A-274E15A238A7}</Project>
+      <Name>test-gtx_color_space_YCoCg</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_common.vcxproj">
+      <Project>{7DD25FFD-5802-3750-88DA-1E0030197177}</Project>
+      <Name>test-gtx_common</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_compatibility.vcxproj">
+      <Project>{F699FFDF-FE1F-31A9-8690-698B225CBE1F}</Project>
+      <Name>test-gtx_compatibility</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_component_wise.vcxproj">
+      <Project>{C939682A-7407-38C4-90D6-0719D70231C8}</Project>
+      <Name>test-gtx_component_wise</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_dual_quaternion.vcxproj">
+      <Project>{3573449A-4B8B-3474-A418-0583D15188DB}</Project>
+      <Name>test-gtx_dual_quaternion</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_easing.vcxproj">
+      <Project>{84762B07-BF12-3D6C-B4C7-C486694DDC96}</Project>
+      <Name>test-gtx_easing</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_euler_angle.vcxproj">
+      <Project>{FF9D8EC4-49B7-36DB-8EED-CA6BE8EC49B4}</Project>
+      <Name>test-gtx_euler_angle</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_extend.vcxproj">
+      <Project>{996FEEEE-E2B0-3D36-AFC3-58271EC528FF}</Project>
+      <Name>test-gtx_extend</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_extended_min_max.vcxproj">
+      <Project>{66205D9C-5756-3209-89F0-6347360100C8}</Project>
+      <Name>test-gtx_extended_min_max</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_exterior_product.vcxproj">
+      <Project>{20EE3C5B-709B-3004-9E15-04A7370AA112}</Project>
+      <Name>test-gtx_exterior_product</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_fast_exponential.vcxproj">
+      <Project>{CC952B7C-FA99-3B5B-8774-E3D37E5EECF3}</Project>
+      <Name>test-gtx_fast_exponential</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_fast_square_root.vcxproj">
+      <Project>{D0E341CB-515F-313B-BF7F-F34B5CEDBFF4}</Project>
+      <Name>test-gtx_fast_square_root</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_fast_trigonometry.vcxproj">
+      <Project>{432B55C7-17A2-3AC8-B0E8-A5594E69104A}</Project>
+      <Name>test-gtx_fast_trigonometry</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_functions.vcxproj">
+      <Project>{3E1FD7B5-AD9D-3A76-BED6-8704C2AEAB20}</Project>
+      <Name>test-gtx_functions</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_gradient_paint.vcxproj">
+      <Project>{ABCFA8FC-F7FF-3FE2-BEC6-1FD46AA68EC3}</Project>
+      <Name>test-gtx_gradient_paint</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_handed_coordinate_space.vcxproj">
+      <Project>{B98AAFA9-27EC-378F-8B4C-14A381028F24}</Project>
+      <Name>test-gtx_handed_coordinate_space</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_integer.vcxproj">
+      <Project>{918EB097-DA21-3474-AAEB-595474873BE0}</Project>
+      <Name>test-gtx_integer</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_intersect.vcxproj">
+      <Project>{1CFBA3D3-582D-38ED-A6D6-53A0C1E442E3}</Project>
+      <Name>test-gtx_intersect</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_io.vcxproj">
+      <Project>{ED607C18-9A90-3973-93C1-5924656D416C}</Project>
+      <Name>test-gtx_io</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_load.vcxproj">
+      <Project>{91236665-BA73-326C-BB45-3EBD9A3E3FF0}</Project>
+      <Name>test-gtx_load</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_log_base.vcxproj">
+      <Project>{5F00EB65-CB22-3D21-A5FC-F2CDF3FA61C6}</Project>
+      <Name>test-gtx_log_base</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_matrix_cross_product.vcxproj">
+      <Project>{05365EB7-32A3-32EC-ACDE-4AC14AADCF20}</Project>
+      <Name>test-gtx_matrix_cross_product</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_matrix_decompose.vcxproj">
+      <Project>{F7A153B0-6034-3822-A4AC-7F27941F2154}</Project>
+      <Name>test-gtx_matrix_decompose</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_matrix_factorisation.vcxproj">
+      <Project>{36B77053-7BB6-355C-BD00-5AC0F834E687}</Project>
+      <Name>test-gtx_matrix_factorisation</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_matrix_interpolation.vcxproj">
+      <Project>{D4E5DFCB-2D1E-3A60-B4E6-36AD32ECB1D1}</Project>
+      <Name>test-gtx_matrix_interpolation</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_matrix_major_storage.vcxproj">
+      <Project>{C4160C4F-ED95-3CA8-9AC7-CEB13D90B388}</Project>
+      <Name>test-gtx_matrix_major_storage</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_matrix_operation.vcxproj">
+      <Project>{13B2212D-4758-3468-A367-679E049B429B}</Project>
+      <Name>test-gtx_matrix_operation</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_matrix_query.vcxproj">
+      <Project>{6AE1E142-8814-3F78-869F-2333D1ACE3B6}</Project>
+      <Name>test-gtx_matrix_query</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_matrix_transform_2d.vcxproj">
+      <Project>{C057457B-ECB9-314F-BC68-07BCB2BB4652}</Project>
+      <Name>test-gtx_matrix_transform_2d</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_norm.vcxproj">
+      <Project>{F5F8D7A1-98F1-39CD-9D5A-845BAF6B5212}</Project>
+      <Name>test-gtx_norm</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_normal.vcxproj">
+      <Project>{661930DA-7364-30E0-94E8-BC9A76300F3E}</Project>
+      <Name>test-gtx_normal</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_normalize_dot.vcxproj">
+      <Project>{5CF94802-B74F-375F-B7E6-A572E7A27C94}</Project>
+      <Name>test-gtx_normalize_dot</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_number_precision.vcxproj">
+      <Project>{D8C1EF65-3080-370E-B192-3278B86BEB5B}</Project>
+      <Name>test-gtx_number_precision</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_optimum_pow.vcxproj">
+      <Project>{0FEDFF5A-96C8-3E16-B2FE-8A30BC0B1406}</Project>
+      <Name>test-gtx_optimum_pow</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_orthonormalize.vcxproj">
+      <Project>{A7A323E6-3EDB-382A-8C38-A4E2D7BAA299}</Project>
+      <Name>test-gtx_orthonormalize</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_perpendicular.vcxproj">
+      <Project>{8D23E493-2988-3654-8DF6-C6220ED0AAAF}</Project>
+      <Name>test-gtx_perpendicular</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_polar_coordinates.vcxproj">
+      <Project>{2494F7F6-2870-34AB-9630-8D2666DD80F7}</Project>
+      <Name>test-gtx_polar_coordinates</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_projection.vcxproj">
+      <Project>{4396EBAF-5875-3D24-AAEB-A442D9190C35}</Project>
+      <Name>test-gtx_projection</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_quaternion.vcxproj">
+      <Project>{FFE08A49-35C2-3C57-BDEF-3943B3645280}</Project>
+      <Name>test-gtx_quaternion</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_range.vcxproj">
+      <Project>{F76F73DD-6BB6-3A29-ABCD-1DA3385AAE2E}</Project>
+      <Name>test-gtx_range</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_rotate_normalized_axis.vcxproj">
+      <Project>{1FA10DEA-E72A-3846-AB7F-058DDD9AFCD1}</Project>
+      <Name>test-gtx_rotate_normalized_axis</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_rotate_vector.vcxproj">
+      <Project>{19E44269-1996-30B8-9ED5-F3E6B98F12B3}</Project>
+      <Name>test-gtx_rotate_vector</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_scalar_multiplication.vcxproj">
+      <Project>{84039A05-251B-3FDC-98BD-A00A2049A7DB}</Project>
+      <Name>test-gtx_scalar_multiplication</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_scalar_relational.vcxproj">
+      <Project>{2E0889A0-9808-38D5-B0FD-E60C79940CB0}</Project>
+      <Name>test-gtx_scalar_relational</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_spline.vcxproj">
+      <Project>{3EF10999-7C7A-3298-9056-89EEE77EE4A4}</Project>
+      <Name>test-gtx_spline</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_string_cast.vcxproj">
+      <Project>{A899F0D3-93E2-381A-AD44-A6028B3DFBA2}</Project>
+      <Name>test-gtx_string_cast</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_texture.vcxproj">
+      <Project>{0761C881-3567-3560-A5AF-19A54A4428C7}</Project>
+      <Name>test-gtx_texture</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_type_aligned.vcxproj">
+      <Project>{5A87929A-E18F-342E-8B9C-ECB162F4DB9F}</Project>
+      <Name>test-gtx_type_aligned</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_type_trait.vcxproj">
+      <Project>{4F7C921A-F72C-320F-A63D-A089E24B241A}</Project>
+      <Name>test-gtx_type_trait</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_vec_swizzle.vcxproj">
+      <Project>{1D66F6C0-A8AB-3096-98CB-6437C8052C71}</Project>
+      <Name>test-gtx_vec_swizzle</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_vector_angle.vcxproj">
+      <Project>{02A6CF1B-342F-35CC-A983-E336FFFA1015}</Project>
+      <Name>test-gtx_vector_angle</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_vector_query.vcxproj">
+      <Project>{3A57B694-2ED0-36D9-AC89-6EED76C09F7B}</Project>
+      <Name>test-gtx_vector_query</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\gtx\test-gtx_wrap.vcxproj">
+      <Project>{983EBBCE-DC88-3D34-A425-EAEE5969482E}</Project>
+      <Name>test-gtx_wrap</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\perf\test-perf_matrix_div.vcxproj">
+      <Project>{5511F02B-5161-387F-AC73-BC10D64BEC57}</Project>
+      <Name>test-perf_matrix_div</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\perf\test-perf_matrix_inverse.vcxproj">
+      <Project>{E262EC3C-5341-3696-8F98-B9F14A4C3949}</Project>
+      <Name>test-perf_matrix_inverse</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\perf\test-perf_matrix_mul.vcxproj">
+      <Project>{4B0DA97A-0FB2-3314-85F4-9E49A8BD9E78}</Project>
+      <Name>test-perf_matrix_mul</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\perf\test-perf_matrix_mul_vector.vcxproj">
+      <Project>{18807F20-C1B6-39B2-9CF1-31A139650412}</Project>
+      <Name>test-perf_matrix_mul_vector</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\perf\test-perf_matrix_transpose.vcxproj">
+      <Project>{6F574528-C91F-34AF-A7AB-5E57EF380955}</Project>
+      <Name>test-perf_matrix_transpose</Name>
+    </ProjectReference>
+    <ProjectReference Include="T:\glm\test\perf\test-perf_vector_mul_matrix.vcxproj">
+      <Project>{9D42B304-4FCE-315F-B4E0-4F073FFEC26C}</Project>
+      <Name>test-perf_vector_mul_matrix</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
